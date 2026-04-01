@@ -14,6 +14,8 @@ CREATE TABLE Compras (
     FOREIGN KEY (ClienteID) REFERENCES Clientes(ID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+SELECT * FROM Clientes;
+
 -- ===== INSERINDO DADOS NA TABELA CLIENTES =====
 INSERT INTO Clientes (nomeCliente, emailCliente) VALUES
 ('João Silva', 'joao.silva@email.com'),
@@ -37,5 +39,3 @@ INSERT INTO Compras (ClienteID, NomeLivro, DataCompra) VALUES
 (6, 'O Alienista', '2026-03-29 10:00:00'),
 (7, 'Neuromancer', '2026-03-31 12:15:00'),
 (8, 'Orgulho e Preconceito', '2026-04-01 14:00:00');
-
-SELECT * FROM Clientes;
