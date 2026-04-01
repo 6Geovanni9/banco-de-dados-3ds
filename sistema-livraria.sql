@@ -39,3 +39,11 @@ INSERT INTO Compras (ClienteID, NomeLivro, DataCompra) VALUES
 (6, 'O Alienista', '2026-03-29 10:00:00'),
 (7, 'Neuromancer', '2026-03-31 12:15:00'),
 (8, 'Orgulho e Preconceito', '2026-04-01 14:00:00');
+
+SELECT 
+    c.nomeCliente,
+    co.NomeLivro,
+    co.DataCompra
+FROM Clientes c
+INNER JOIN Compras co ON c.ID = co.ClienteID
+ORDER BY co.DataCompra DESC;
